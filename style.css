@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: white;
+    background-color: hsl(233, 47%, 7%);
+    font-family: "Lexend Deca";
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview {
+    width: 100%;
+    height: auto;
+    margin: 5rem 2rem;
+    background-color: hsl(244, 38%, 16%);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.preview-imagebox {
+    width: 100%;
+    height: 250px;
+    border-radius: .5rem .5rem 0 0;
+    background-color: hsl(277, 64%, 61%);
+    position: relative;
+}
+
+.preview-imagebox::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    border-radius: .5rem .5rem 0 0;
+    background-image: url("./images/image-header-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity: .7;
+}
+
+.preview-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 3rem 2rem;
+}
+
+.preview-content__h2 {
+    font-size: 3rem;
+}
+
+.preview-content__h2-insights {
+    color: hsl(277, 64%, 61%);
+}
+
+.preview-content__p {
+    margin: 2rem 1rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    color: hsla(0, 0%, 100%, 0.75);
+}
+
+.preview-content-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.preview-content-info__p {
+    text-transform: uppercase;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.preview-content-info__span {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+
+@media (min-width: 450px) {
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .preview-content * {
+        margin: 0;
+    }
+
+    .preview {
+        flex-direction: row-reverse;
+        max-width: 850px;
+    }
+
+    .preview-content {
+        text-align: start;
+        margin: 4rem;
+    }
+
+    .preview-content__p {
+        margin-top: 2rem;
+    }
+
+    .preview-imagebox {
+        margin-left: 6rem;
+        height: auto;
+        border-radius: 0 .5rem .5rem 0;
+    }
+
+    .preview-imagebox::after {
+        background-image: url("./images/image-header-desktop.jpg");
+        height: 100%;
+        border-radius: 0 .5rem .5rem 0;
+    }
+
+    .preview-content-info {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 4rem;
+    }
+}
